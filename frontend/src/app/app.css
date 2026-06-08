@@ -1,0 +1,11 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+.navbar{
+    font-size: 21px;
+}
+.custom-brand {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+}

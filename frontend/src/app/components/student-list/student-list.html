@@ -1,0 +1,53 @@
+<div class="container mt-4">
+  @if (students.length > 0) {
+    <table class="table table-dark table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Age</th>
+          <th>Class</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (student of paginatedStudents; track student.id) {
+          <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.first_name }}</td>
+            <td>{{ student.last_name }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.class }}</td>
+            <td>
+              <button class="btn btn-danger btn-sm" (click)="deleteStudent(student.id)">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+            <td>
+              <button class="btn btn-warning btn-sm" (click)="updateStudent(student.id)">
+                <i class="bi bi-pencil-square"></i>
+              </button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    <div class="d-flex gap-2 mt-4">
+      <button class="btn btn-primary" (click)="previousPage()" [disabled]="currentPage === 1">
+        Previous
+      </button>
+      <button
+        class="btn btn-primary"
+        (click)="nextPage()"
+        [disabled]="currentPage * itemsPerPage >= students.length"
+      >
+        Next
+      </button>
+    </div>
+  } @else {
+    <div class="alert alert-info">No Students Found</div>
+  }
+</div>

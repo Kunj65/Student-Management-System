@@ -1,0 +1,86 @@
+# =========================
+# Dependencies
+# =========================
+
+node_modules/
+
+# =========================
+# Environment Variables
+# =========================
+
+.env
+.env.*
+backend/.env
+
+# =========================
+# Angular
+# =========================
+
+frontend/dist/
+frontend/.angular/
+.angular/
+dist/
+
+# =========================
+# Logs
+# =========================
+
+logs/
+*.log
+backend/log.txt
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Coverage / Testing
+# =========================
+
+coverage/
+.nyc_output/
+
+# =========================
+# IDEs
+# =========================
+
+.vscode/
+frontend/.vscode/
+.idea/
+
+# =========================
+# OS Files
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Temporary Files
+# =========================
+
+tmp/
+temp/
+*.tmp
+
+# =========================
+# Cache
+# =========================
+
+.cache/
+.eslintcache
+
+# =========================
+# Build Artifacts
+# =========================
+
+build/
+out/
+
+# =========================
+# Misc
+# =========================
+
+*.pid
+*.seed
+*.pid.lock

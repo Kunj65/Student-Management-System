@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a routerLink="/students" style="cursor: pointer" class="navbar-brand custom-brand">
+      Student Management System
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/students"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            Students List
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/create" routerLinkActive="active-link">
+            Create Student
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/edit/1" routerLinkActive="active-link">
+            Update Student
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/details/1" routerLinkActive="active-link">
+            View Student
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/delete" routerLinkActive="active-link">
+            Delete Student
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/orderbyage" routerLinkActive="active-link">
+            Students Ordered By Age
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/searchstudent" routerLinkActive="active-link">
+            Students Search
+          </a>
+        </li>
+      </ul>
+
+      <button class="btn btn-danger" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</nav>

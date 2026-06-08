@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <div class="card p-4 shadow">
+    <h2 class="mb-4 text-info">View Student</h2>
+
+    <div class="mb-3">
+      <label class="form-label">Student ID</label>
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Enter Student ID"
+        [(ngModel)]="studentId"
+      />
+    </div>
+
+    <button class="btn btn-info text-white" (click)="getStudentById()">Get Student</button>
+
+    @if (errorMessage) {
+      <div class="alert alert-danger mt-4">
+        {{ errorMessage }}
+      </div>
+    }
+
+    @if (student) {
+      <div class="mt-4">
+        <hr />
+        <div class="mb-2">
+          <label class="form-label fw-bold">First Name</label>
+          <p class="form-control bg-light">{{ student.first_name }}</p>
+        </div>
+        <div class="mb-2">
+          <label class="form-label fw-bold">Last Name</label>
+          <p class="form-control bg-light">{{ student.last_name }}</p>
+        </div>
+        <div class="mb-2">
+          <label class="form-label fw-bold">Age</label>
+          <p class="form-control bg-light">{{ student.age }}</p>
+        </div>
+        <div class="mb-2">
+          <label class="form-label fw-bold">Class</label>
+          <p class="form-control bg-light">{{ student.class }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</div>

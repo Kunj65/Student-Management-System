@@ -1,0 +1,29 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.navbar {
+    font-size: 20px;
+}
+
+.custom-brand {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.btn {
+    font-size: 21px;
+    padding: 9px 21px;
+}
+
+.nav-link {
+    color: #d6d6d6 !important;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #0d6efd !important;
+}
+
+.active-link {
+    color: #0d6efd !important;
+    font-weight: bold;
+}

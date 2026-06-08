@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="card p-4 shadow">
+    <h2 class="mb-4 text-danger">Delete Student</h2>
+
+    <div class="mb-3">
+      <label class="form-label"> Student ID </label>
+
+      <input
+        type="number"
+        class="form-control"
+        placeholder="Enter Student ID"
+        [(ngModel)]="studentId"
+      />
+    </div>
+
+    <button class="btn btn-danger" (click)="deleteStudentById()" [disabled]="isLoading">
+      @if (isLoading) {
+        Deleting...
+
+      } @else {
+        Delete Student
+      }
+    </button>
+
+    @if (successMessage) {
+      <div class="alert alert-success mt-4">
+        {{ successMessage }}
+      </div>
+    }
+
+    @if (errorMessage) {
+      <div class="alert alert-danger mt-4">
+        {{ errorMessage }}
+      </div>
+    }
+  </div>
+</div>
