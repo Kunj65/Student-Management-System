@@ -17,32 +17,19 @@ const {
 
 // SIGNUP
 
-router.post(
-    "/signup",
-    handleUserSignup
-);
+router.post("/signup", handleUserSignup);
 
 
 // LOGIN
 
-router.post(
-    "/login",
-    handleUserLogin
-);
+router.post("/login", handleUserLogin);
 
 
 // LOGOUT
 
-router.post(
-    "/logout",
-    handleLogout
-);
+router.post("/logout", handleLogout);
 
-router.get(
-    "/check-auth",
-    checkAuthApi,
-    handleCheckAuth
-);
+router.get("/check-auth", checkAuthApi, handleCheckAuth);
 
 
 module.exports = router;

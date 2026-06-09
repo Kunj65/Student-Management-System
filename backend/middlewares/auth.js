@@ -48,7 +48,6 @@ function checkAuthApi(
         });
 
     }
-
 }
 
 module.exports = {
