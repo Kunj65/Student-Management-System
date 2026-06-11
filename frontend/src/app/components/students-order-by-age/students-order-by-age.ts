@@ -17,7 +17,7 @@ export class StudentOrderByAge implements OnInit {
 
   students: any[] = [];
   currentPage = 1;
-  itemsPerPage = 15;
+  itemsPerPage = 10;
 
   async ngOnInit(): Promise<void> {
     await this.authService.initializeAuth();
