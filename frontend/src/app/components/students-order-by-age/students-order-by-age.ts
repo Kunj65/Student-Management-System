@@ -1,6 +1,5 @@
 import { Component, inject, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 import { StudentService } from '../../services/student';
 import { AuthService } from '../../services/auth';
 
